@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+  #hero {
+    text-align: center;
+  }
+  #about,
+  #skills,
+  #projects,
+  #contact {
+    margin-top: 4rem;
+  }
+  .main-text {
+    margin-top: 3rem !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  .timeline::after {
+    left: 20px;
+  }
+  .timeline-item {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding-left: 40px;
+  }
+  .timeline-item::after {
+    left: 10px;
+  }
+  .icons {
+    font-size: 3rem;
+    margin-top: 30px;
+  }
+}
