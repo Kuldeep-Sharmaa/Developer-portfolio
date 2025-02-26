@@ -47,7 +47,9 @@ header {
   color: #ff6a3d;
   font-size: 2.9rem;
 }
-
+.animation {
+  width: 100%;
+}
 .btnn {
   background-color: var(--main-color);
   padding: 4px 15px;
