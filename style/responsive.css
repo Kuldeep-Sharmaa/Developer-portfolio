@@ -30,3 +30,31 @@
     margin-top: 30px;
   }
 }
+@media (max-width: 767.98px) {
+  /* Center text on smaller screens */
+  #hero .text-md-start {
+    text-align: center !important;
+  }
+
+  #hero .text-md-end {
+    text-align: center !important;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+  .hero-animation {
+    margin-top: -50px;
+  }
+  .about-section-title {
+    font-size: 1.75rem;
+  }
+
+  .about-heading {
+    font-size: 1.3rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+}

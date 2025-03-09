@@ -56,183 +56,276 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Include Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a href="index.html" class="logo">Portfolio</a>
+      <!-- NAVBAR START -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <!-- Brand / Logo -->
+          <a class="navbar-brand fw-bold" href="#"> KULDEEP </a>
+
+          <!-- Toggler (for mobile) -->
           <button
-            class="navbar-toggler bg-white"
+            class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-center"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav mb-2 mt-4 text-center">
+
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link mx-5" href="#about">About me</a>
+                <a class="nav-link active" aria-current="page" href="#hero"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-5" href="#projects">Projects</a>
+                <a class="nav-link" href="#about">About me</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-5" href="#contact">Contact me</a>
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+      <!-- NAVBAR END -->
     </header>
     <main>
-      <section id="hero">
+      <!-- HERO SECTION START -->
+      <section id="hero" class="py-5 hidden" data-animate="fade-up">
         <div class="container">
-          <div class="row align-items-center justify-content-center">
-            <!-- text -->
-            <div class="col-md-6 main-text">
-              <div class="intro-text text-white fw-medium">
-                Hi, My name is <br />
-                <span class="myself">Kuldeep Sharma</span> <br />
-                and i am a Passionate
-              </div>
+          <div class="row align-items-center">
+            <!-- Text Column -->
+            <div class="col-md-6 text-center text-md-start">
+              <h1 class="fw-bold">
+                Hello, I’m
+                <span>Kuldeep Sharma</span>
+              </h1>
+              <p class="lead mt-3">
+                A passionate
+                <span id="typed-element"></span>
+              </p>
 
-              <!-- Element to contain animated typing -->
-
-              <span id="element"></span>
-
-              <div class="buttons mt-5">
-                <!-- github button -->
+              <!-- CTA Buttons -->
+              <div class="mt-4">
                 <a
                   href="https://github.com/Kuldeep-Sharmaa"
-                  rel="noopener noreferrer"
                   target="_blank"
-                  ><button class="btnn mx-4" type="button">
-                    My GitHub <i class="fa-brands fa-github"></i></button
-                ></a>
-
-                <!-- download resume -->
-
-                <a href="img/CV - Kuldeep Sharma.pdf" download
-                  ><button class="btnn mt-2" type="button">
-                    Download Resume <i class="fa-solid fa-download"></i></button
-                ></a>
+                  rel="noopener noreferrer"
+                  class="btn btn-primary me-2 mb-2"
+                >
+                  My GitHub
+                </a>
+                <a
+                  href="img/CV - Kuldeep Sharma.pdf"
+                  download
+                  class="btn btn-outline-primary mb-2"
+                >
+                  Download Resume
+                </a>
               </div>
             </div>
-            <!-- image -->
+
+            <!-- Animation Column -->
             <div class="col-md-6">
-              <div>
+              <div class="text-center text-md-end">
                 <lottie-player
-                  src="https://assets2.lottiefiles.com/packages/lf20_w51pcehl.json"
+                  src="images/hero.json"
                   background="transparent"
                   speed="1"
                   loop
                   autoplay
-                  class="animation d-none d-md-block"
                 ></lottie-player>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <hr />
-      <section id="about">
+      <!-- HERO SECTION END -->
+
+      <!-- ABOUT ME SECTION START -->
+      <section id="about" class="py-5 hidden" data-animate="fade-right">
         <div class="container">
-          <div class="row text-center align-items-center">
-            <h2 class="heading text-center">About Me</h2>
-            <div class="col-md-6">
-              <img
-                src="images/programmer-working-flat-style 2.png"
-                class="img-fluid d-none d-md-block"
-                alt=""
-              />
+          <!-- Section Title & Subtitle -->
+          <div class="text-center mb-5">
+            <h2 class="about-section-title">ABOUT ME</h2>
+            <p class="about-section-subtitle">
+              Here you’ll find more details about who I am, what I do, and my
+              current focus in the world of programming and technology.
+            </p>
+            <div class="underline mx-auto"></div>
+          </div>
+
+          <div class="row align-items-center">
+            <!-- Left Column: Text Content -->
+            <div class="col-md-6 mb-4 mb-md-0">
+              <h3 class="about-heading">Get to know me!</h3>
+              <p class="about-text">
+                I'm a <strong>Frontend-Focused Web Developer</strong> who’s
+                passionate about crafting intuitive and engaging user
+                experiences. By specializing in the front-end, I ensure that
+                websites and applications are not only visually appealing but
+                also smooth to navigate—ultimately contributing to the product’s
+                success.
+              </p>
+              <p class="about-text">
+                In addition to development, I enjoy
+                <strong>sharing insights</strong>
+                and practical tips from my journey in Web Development so others
+                in the dev community can learn and grow. Connect with me on
+                <strong>LinkedIn</strong> or <strong>Instagram</strong> to stay
+                updated on my latest tutorials, coding tips, and industry news.
+              </p>
+              <p class="about-text">
+                I’m always open to <strong>opportunities</strong> that align
+                with my passion and skill set. If you have a project or position
+                in mind that you think I'd be a great fit for, please don’t
+                hesitate to get in touch.
+              </p>
+              <a href="#contact" class="btn btn-primary about-contact-btn">
+                Contact
+              </a>
+            </div>
+
+            <!-- Right Column: Animation -->
+            <div class="col-md-6 text-center">
+              <!-- Replace the src URL with your chosen Lottie animation -->
               <lottie-player
-                src="https://assets2.lottiefiles.com/packages/lf20_w51pcehl.json"
+                src="images/developer.json"
                 background="transparent"
                 speed="1"
                 loop
                 autoplay
-                class="animation d-md-none"
+                class="about-lottie"
               ></lottie-player>
             </div>
-            <div class="col-md-6">
-              <p class="text-white fs-3 lh-base">
-                Hey there! I’m Kuldeep Sharma (though some know me as Rohan), a
-                22-year-old front-end developer based in Punjab, India. After
-                wrapping up my Bachelor's in Computer Applications from Punjab
-                University, Chandigarh in 2022, I dove headfirst into the world
-                of web development. I love crafting digital experiences that
-                balance clean design with smooth functionality. Whether I’m
-                experimenting with new design trends or perfecting the tiniest
-                detail of a project, I bring my passion and a personal touch to
-                every line of code. Welcome to my portfolio—come see how I blend
-                creativity with technical skills to build engaging web
-                experiences.
-              </p>
-            </div>
           </div>
         </div>
       </section>
-      <hr />
-      <section id="skills">
+      <!-- ABOUT ME SECTION END -->
+
+      <!-- SKILLS SECTION START -->
+      <section id="skills" class="py-5 hidden" data-animate="fade-left">
         <div class="container">
-          <div class="row text-center">
-            <h2 class="heading">My Skills</h2>
-            <div class="bar-section">
-              <div class="skill">
-                <p><i class="fa-brands fa-html5"></i> HTML</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="90%"></div>
-                </div>
-              </div>
+          <div class="text-center mb-5">
+            <h2 class="skills-title">MY SKILLS</h2>
+            <p class="skills-subtitle">
+              A quick overview of my proficiency in various technologies.
+            </p>
+            <div class="underline mx-auto"></div>
+          </div>
 
-              <div class="skill">
-                <p><i class="fa-brands fa-css3-alt"></i> CSS</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="85%"></div>
+          <!-- Skills Grid -->
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4"
+            id="skills-grid"
+          >
+            <!-- Skill Card: HTML5 -->
+            <div class="col">
+              <div class="skill-card">
+                <div class="chart-container">
+                  <canvas id="chart-html"></canvas>
+                  <div class="chart-label" id="label-html">95%</div>
                 </div>
+                <h4 class="skill-name mt-3">HTML5</h4>
               </div>
+            </div>
 
-              <div class="skill">
-                <p><i class="fa-brands fa-js"></i> JavaScript</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="80%"></div>
+            <!-- Skill Card: Bootstrap -->
+            <div class="col">
+              <div class="skill-card">
+                <div class="chart-container">
+                  <canvas id="chart-bootstrap"></canvas>
+                  <div class="chart-label" id="label-bootstrap">90%</div>
                 </div>
+                <h4 class="skill-name mt-3">Bootstrap</h4>
               </div>
+            </div>
 
-              <div class="skill">
-                <p><i class="fa-brands fa-react"></i> React</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="75%"></div>
+            <!-- Skill Card: CSS3 -->
+            <div class="col">
+              <div class="skill-card">
+                <div class="chart-container">
+                  <canvas id="chart-css"></canvas>
+                  <div class="chart-label" id="label-css">90%</div>
                 </div>
+                <h4 class="skill-name mt-3">CSS3</h4>
               </div>
+            </div>
 
-              <div class="skill">
-                <p><i class="fa-brands fa-css3-alt"></i> Tailwind CSS</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="85%"></div>
+            <!-- Skill Card: JavaScript -->
+            <div class="col">
+              <div class="skill-card">
+                <div class="chart-container">
+                  <canvas id="chart-js"></canvas>
+                  <div class="chart-label" id="label-js">80%</div>
                 </div>
+                <h4 class="skill-name mt-3">JavaScript</h4>
               </div>
+            </div>
 
-              <div class="skill">
-                <p><i class="fa-brands fa-bootstrap"></i> Bootstrap</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="90%"></div>
+            <!-- Skill Card: Tailwind CSS -->
+            <div class="col">
+              <div class="skill-card">
+                <div class="chart-container">
+                  <canvas id="chart-tailwind"></canvas>
+                  <div class="chart-label" id="label-tailwind">75%</div>
                 </div>
+                <h4 class="skill-name mt-3">Tailwind CSS</h4>
+              </div>
+            </div>
+
+            <!-- Skill Card: React -->
+            <div class="col">
+              <div class="skill-card">
+                <div class="chart-container">
+                  <canvas id="chart-react"></canvas>
+                  <div class="chart-label" id="label-react">85%</div>
+                </div>
+                <h4 class="skill-name mt-3">React</h4>
+              </div>
+            </div>
+
+            <!-- Skill Card: Responsive Design -->
+            <div class="col">
+              <div class="skill-card">
+                <div class="chart-container">
+                  <canvas id="chart-responsive"></canvas>
+                  <div class="chart-label" id="label-responsive">90%</div>
+                </div>
+                <h4 class="skill-name mt-3">Responsive Design</h4>
+              </div>
+            </div>
+
+            <!-- Skill Card: SEO -->
+            <div class="col">
+              <div class="skill-card">
+                <div class="chart-container">
+                  <canvas id="chart-seo"></canvas>
+                  <div class="chart-label" id="label-seo">70%</div>
+                </div>
+                <h4 class="skill-name mt-3">SEO</h4>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <hr />
+      <!-- SKILLS SECTION END -->
+
       <section id="projects">
         <div class="container mt-5">
           <div class="row text-center">
@@ -685,10 +778,16 @@
     </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Setup and start animation! -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-      var typed = new Typed("#element", {
-        strings: ["Front End Developer &lt;/&gt;", "Freelancer &lt;/&gt;"],
-        typeSpeed: 80,
+      var typed = new Typed("#typed-element", {
+        strings: [
+          "<span style='color: #3B82F6;'>Front-End Developer</span> &lt;/&gt;",
+          "<span style='color: #F97316;'>Freelancer</span> &lt;/&gt;",
+        ],
+        typeSpeed: 70,
+        backSpeed: 50,
+        loop: true, // repeats the typing effect
       });
     </script>
 
@@ -737,5 +836,258 @@
         window.addEventListener("scroll", showSkillBars);
       });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1) Define a function that creates all your charts
+        function createCharts() {
+          // HTML5 chart (95%)
+          const ctxHtml = document
+            .getElementById("chart-html")
+            .getContext("2d");
+          new Chart(ctxHtml, {
+            type: "doughnut",
+            data: {
+              datasets: [
+                {
+                  data: [95, 5],
+                  backgroundColor: ["#3B82F6", "#e0e0e0"],
+                  borderWidth: 0,
+                },
+              ],
+            },
+            options: {
+              cutout: "70%",
+              plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false },
+              },
+              animation: {
+                animateRotate: true,
+                duration: 1500,
+              },
+            },
+          });
+
+          // Bootstrap chart (90%)
+          const ctxBootstrap = document
+            .getElementById("chart-bootstrap")
+            .getContext("2d");
+          new Chart(ctxBootstrap, {
+            type: "doughnut",
+            data: {
+              datasets: [
+                {
+                  data: [90, 10],
+                  backgroundColor: ["#3B82F6", "#e0e0e0"],
+                  borderWidth: 0,
+                },
+              ],
+            },
+            options: {
+              cutout: "70%",
+              plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false },
+              },
+              animation: {
+                animateRotate: true,
+                duration: 1500,
+              },
+            },
+          });
+
+          // CSS3 chart (90%)
+          const ctxCss = document.getElementById("chart-css").getContext("2d");
+          new Chart(ctxCss, {
+            type: "doughnut",
+            data: {
+              datasets: [
+                {
+                  data: [90, 10],
+                  backgroundColor: ["#3B82F6", "#e0e0e0"],
+                  borderWidth: 0,
+                },
+              ],
+            },
+            options: {
+              cutout: "70%",
+              plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false },
+              },
+              animation: {
+                animateRotate: true,
+                duration: 1500,
+              },
+            },
+          });
+
+          // JavaScript chart (80%)
+          const ctxJs = document.getElementById("chart-js").getContext("2d");
+          new Chart(ctxJs, {
+            type: "doughnut",
+            data: {
+              datasets: [
+                {
+                  data: [80, 20],
+                  backgroundColor: ["#3B82F6", "#e0e0e0"],
+                  borderWidth: 0,
+                },
+              ],
+            },
+            options: {
+              cutout: "70%",
+              plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false },
+              },
+              animation: {
+                animateRotate: true,
+                duration: 1500,
+              },
+            },
+          });
+
+          // Tailwind CSS chart (75%)
+          const ctxTailwind = document
+            .getElementById("chart-tailwind")
+            .getContext("2d");
+          new Chart(ctxTailwind, {
+            type: "doughnut",
+            data: {
+              datasets: [
+                {
+                  data: [75, 25],
+                  backgroundColor: ["#3B82F6", "#e0e0e0"],
+                  borderWidth: 0,
+                },
+              ],
+            },
+            options: {
+              cutout: "70%",
+              plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false },
+              },
+              animation: {
+                animateRotate: true,
+                duration: 1500,
+              },
+            },
+          });
+
+          // React chart (85%)
+          const ctxReact = document
+            .getElementById("chart-react")
+            .getContext("2d");
+          new Chart(ctxReact, {
+            type: "doughnut",
+            data: {
+              datasets: [
+                {
+                  data: [85, 15],
+                  backgroundColor: ["#3B82F6", "#e0e0e0"],
+                  borderWidth: 0,
+                },
+              ],
+            },
+            options: {
+              cutout: "70%",
+              plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false },
+              },
+              animation: {
+                animateRotate: true,
+                duration: 1500,
+              },
+            },
+          });
+
+          // Responsive Design chart (90%)
+          const ctxResponsive = document
+            .getElementById("chart-responsive")
+            .getContext("2d");
+          new Chart(ctxResponsive, {
+            type: "doughnut",
+            data: {
+              datasets: [
+                {
+                  data: [90, 10],
+                  backgroundColor: ["#3B82F6", "#e0e0e0"],
+                  borderWidth: 0,
+                },
+              ],
+            },
+            options: {
+              cutout: "70%",
+              plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false },
+              },
+              animation: {
+                animateRotate: true,
+                duration: 1500,
+              },
+            },
+          });
+
+          // SEO chart (70%)
+          const ctxSeo = document.getElementById("chart-seo").getContext("2d");
+          new Chart(ctxSeo, {
+            type: "doughnut",
+            data: {
+              datasets: [
+                {
+                  data: [70, 30],
+                  backgroundColor: ["#3B82F6", "#e0e0e0"],
+                  borderWidth: 0,
+                },
+              ],
+            },
+            options: {
+              cutout: "70%",
+              plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false },
+              },
+              animation: {
+                animateRotate: true,
+                duration: 1500,
+              },
+            },
+          });
+        }
+
+        // 2) Use Intersection Observer to detect when the #skills section is visible
+        const skillsSection = document.getElementById("skills");
+        let chartsCreated = false; // flag to ensure charts only create once
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !chartsCreated) {
+                // Remove hidden class from skill cards and add show class
+                document.querySelectorAll(".skill-card").forEach((card) => {
+                  card.classList.remove("hidden");
+                  card.classList.add("show");
+                });
+                // Create the charts
+                createCharts();
+                chartsCreated = true; // prevent re-creation on re-scroll
+                observer.unobserve(skillsSection); // stop observing after creation
+              }
+            });
+          },
+          {
+            threshold: 0.3, // 30% of the section must be visible
+          }
+        );
+
+        observer.observe(skillsSection);
+      });
+    </script>
+
+    <script src="script.js"></script>
   </body>
 </html>
