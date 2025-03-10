@@ -1,4 +1,7 @@
 @media (max-width: 767.98px) {
+  #hero {
+    padding-top: 30px;
+  }
   #hero .text-md-start {
     text-align: center !important;
   }
@@ -39,5 +42,11 @@
   }
   .d-none.d-md-block {
     display: none !important;
+  }
+  .skill-card {
+    background-color: #f9fafb !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    padding: 1.5rem !important;
   }
 }

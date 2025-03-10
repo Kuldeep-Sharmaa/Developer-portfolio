@@ -193,6 +193,7 @@ body {
 /* Skills Section  */
 #skills {
   background-color: var(--main-bg-color);
+  padding: 2rem 0;
 }
 
 .skills-title {
