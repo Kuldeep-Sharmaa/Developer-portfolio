@@ -928,103 +928,151 @@
       </section>
       <!-- PROJECTS SECTION END -->
 
-      <section id="contact">
+      <!-- CONTACT SECTION START -->
+      <section id="contact" class="contact-section py-5">
         <div class="container">
-          <div class="row text-center">
-            <h2 class="heading mb-5">Get in Touch</h2>
+          <!-- Section Heading & Subtitle -->
+          <div class="text-center mb-5">
+            <h2 class="section-heading">Contact Me</h2>
+            <p class="section-subtitle">
+              I'd love to hear from you! Whether it's a question, a project
+              idea, or just a friendly hello.
+            </p>
+            <div class="underline mx-auto"></div>
+          </div>
 
-            <!-- mail -->
-            <div class="col-md-6 d-flex align-items-center flex-column mb-5">
-              <h3 class="sub_heading">Email</h3>
-              <form action="https://api.web3forms.com/submit" method="POST">
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value="779369ea-1486-467a-8ae6-6da2d59e3963"
-                />
-
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                />
-
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email ID"
-                  required
-                />
-
-                <textarea
-                  id="message"
-                  placeholder="How can I help you?"
-                  rows="4"
-                  name="message"
-                  required
-                ></textarea>
-
-                <button type="submit" class="submit">Submit</button>
-              </form>
-            </div>
-            <!-- media -->
-            <div class="col-md-6 d-flex justify-content-center flex-column">
-              <h3 class="sub_heading">Social Media</h3>
-              <div class="icons d-flex justify-content-around">
-                <!-- instagram-icon -->
-
-                <a
-                  href="https://www.instagram.com/rohan_.x01"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><span class="d-none">links</span>
-                  <i class="fa-brands fa-instagram"></i
-                ></a>
-
-                <!-- X-icon -->
-
-                <a
-                  href="https://twitter.com/RohanKS140"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><span class="d-none">links</span>
-                  <i class="fa-brands fa-twitter"></i>
-                </a>
-
-                <!-- github-icon -->
-
-                <a
-                  href="https://github.com/Kuldeep-Sharmaa"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><span class="d-none">links</span>
-                  <i class="fa-brands fa-github"></i
-                ></a>
-
-                <!-- linkedin-icon -->
-
-                <a
-                  href="https://www.linkedin.com/in/kuldeep-sharma-015619307"
-                  target="_blank"
-                  rel="noopener noreferrer"
+          <div class="row align-items-center">
+            <!-- Contact Form Column -->
+            <div class="col-md-7">
+              <div class="glass-card p-4 p-md-5">
+                <form
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  class="contact-form"
                 >
-                  <span class="d-none">links</span>
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="779369ea-1486-467a-8ae6-6da2d59e3963"
+                  />
+
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                    />
+                    <label for="name">Your Name</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="Email Address"
+                      required
+                    />
+                    <label for="email">Email Address</label>
+                  </div>
+
+                  <div class="form-floating mb-4">
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      name="message"
+                      placeholder="How can I help you?"
+                      rows="4"
+                      required
+                    ></textarea>
+                    <label for="message">How can I help you?</label>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary w-100 submit-btn"
+                  >
+                    Send Message
+                  </button>
+                </form>
               </div>
+            </div>
+
+            <!-- Optional Image or Illustration Column (if desired) -->
+            <div class="col-md-5 d-none d-md-block">
+              <img
+                src="images/undraw_envelope_hem0.svg"
+                alt="Contact Illustration"
+                class="img-fluid"
+              />
             </div>
           </div>
         </div>
       </section>
+      <!-- CONTACT SECTION END -->
     </main>
-    <footer class="text-center mt-5">
-      <div class="love">
-        Made with<span class="art"> &#10084; </span> by Kuldeep Sharma
+    <footer class="footer">
+      <div class="container">
+        <div
+          class="footer-top d-flex flex-column flex-md-row justify-content-between align-items-center py-4"
+        >
+          <div class="footer-brand text-center text-md-start mb-3 mb-md-0">
+            <h3>Kuldeep Sharma</h3>
+            <p>Crafting Digital Experiences</p>
+          </div>
+          <div class="footer-social text-center">
+            <!-- instagram-icon -->
+
+            <a
+              href="https://www.instagram.com/rohan_.x01"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="d-none">links</span>
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+
+            <!-- X-icon -->
+
+            <a
+              href="https://twitter.com/RohanKS140"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="d-none">links</span>
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+
+            <!-- github-icon -->
+
+            <a
+              href="https://github.com/Kuldeep-Sharmaa"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="d-none">links</span>
+              <i class="fa-brands fa-github"></i
+            ></a>
+
+            <!-- linkedin-icon -->
+
+            <a
+              href="https://www.linkedin.com/in/kuldeep-sharma-015619307"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="d-none">links</span>
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+          <p class="mb-0">&copy; 2025 Kuldeep Sharma. All rights reserved.</p>
+        </div>
       </div>
     </footer>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Setup and start animation! -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

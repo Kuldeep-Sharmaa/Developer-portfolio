@@ -34,6 +34,7 @@ body {
   font-family: var(--main-font);
   background-color: var(--main-bg-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -440,80 +441,173 @@ body {
   transform: translateY(0);
 }
 
-/* Form Container */
-form {
-  max-width: 450px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+/* contact-section */
+
+/* New styles for Contact Section Heading */
+.section-heading {
+  font-size: var(--h1-font-size);
+  font-weight: 700;
+  color: var(--text-color);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+  font-weight: var(--subheading-font-weight);
+  max-width: 650px;
+  margin: 0 auto 1rem;
   text-align: center;
 }
 
-/* Input Fields */
-input,
+.contact-section {
+  position: relative;
+  background-color: var(--main-bg-color); /* or your preferred background */
+  padding: 5rem 0;
+}
+
+/* Glass Card with Glassmorphism Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  color: var(--text-color, #333);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Title & Subtitle */
+.contact-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-color, #333);
+  margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary-color, #666);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form Floating Labels (using Bootstrap) */
+.contact-form .form-floating .form-control {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 50px;
+}
+
+.contact-form .form-floating textarea.form-control {
+  resize: none;
+  height: auto;
+}
+
+.contact-form .form-floating > label {
+  color: #666;
+  font-size: 0.95rem;
+  padding: 0.5rem;
+}
 textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0 !important;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  outline: none;
+  height: 120px;
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: #ddd;
-}
-
-/* Focus Effect */
-input:focus,
-textarea:focus {
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid #00d4ff;
+.contact-form .form-floating > .form-control:focus + label {
+  color: var(--accent-color, #3b82f6);
 }
 
 /* Submit Button */
-button.submit {
-  width: 100%;
-  padding: 12px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background: #00d4ff;
+.submit-btn {
+  background-color: var(--accent-color, #3b82f6);
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button.submit:hover {
-  background: #009bbf;
-  transform: scale(1.05);
+.submit-btn:hover {
+  background-color: var(--btn-hover, #2563eb);
+  transform: translateY(-2px);
 }
 
-.icons {
-  font-size: 5rem;
-  margin-top: 30px;
+/* Social Media Icons */
+.social-links .social-icon {
+  font-size: 1.3rem;
+  color: #fff;
+  background: var(--accent-color, #3b82f6);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.icons a {
-  color: #fcfafa;
+.social-links .social-icon:hover {
+  background: var(--btn-hover, #2563eb);
+  transform: scale(1.1);
 }
 
-.icons a:hover {
-  color: #6576c4;
-}
-.love {
-  font-family: "Courier New";
-  color: #8a8f99;
+/* footer */
+.footer {
+  background: linear-gradient(135deg, #0b0e27, #1a2238);
+  color: #fff;
+  padding: 2rem 0;
 }
 
-.art {
-  margin: 5px;
-  font-weight: 800;
-  color: rgb(199, 25, 25);
+.footer-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-brand h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer-brand p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer-social a {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: var(--accent-color, #3b82f6);
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.heart {
+  color: var(--accent-color, #3b82f6);
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 767.98px) {
+  .footer-top {
+    flex-direction: column;
+  }
+  .footer-social {
+    margin-top: 1rem;
+  }
 }
