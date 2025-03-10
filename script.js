@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     {
-      threshold: 0.3, // Adjust how much of the element must be visible
+      threshold: 0.3,
     }
   );
 

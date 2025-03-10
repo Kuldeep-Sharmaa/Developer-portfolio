@@ -57,4 +57,17 @@
   .about-text {
     font-size: 0.95rem;
   }
+  .project-card {
+    padding: 1rem;
+  }
+  .project-image {
+    margin-bottom: 1rem;
+  }
+  .project-details {
+    padding: 0;
+  }
+  #projects {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
